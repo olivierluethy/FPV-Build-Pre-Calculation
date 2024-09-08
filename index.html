@@ -1,36 +1,88 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPV Build Pre Calculation</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
- <script src="drehzahlcalc.js" defer></script>
- <script src="faustregel.js" defer></script>
- <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <h1>Oberer Teil</h1>
+    <fieldset>
+      <legend>Berechnung Drehzahl</legend>
+      <label for="">KV</label>
+      <input type="text" id="calcKV" placeholder="Enter KV" onkeyup="calcDrehzahl()"/><br />
 
-<body>
+      <label for="">Spannung (V)</label>
+      <input type="text" id="calcSpan" placeholder="Enter Spannung" onkeyup="calcDrehzahl()" /><br />
 
- <h1>Important Calculations before Building FPV Drone</h1>
- <h2>Formeln für Umdrehungen pro Minute (RPM)</h2>
- <label for="drehzahl">Drehzahl (RPM):</label>
- <input type="text" id="drehzahl" oninput="calculator.calculate()"><br>
- <label for="kv">KV-Wert:</label>
- <input type="text" id="kv" oninput="calculator.calculate()"><br>
- <label for="spannung">Spannung (V):</label>
- <input type="text" id="spannung" oninput="calculator.calculate()"><br>
- <p id="rpm-warning" class="warning"></p>
- 
- <h2>Faustregel</h2>
- <label for="maxSpannung">Maximale Spannung (V):</label>
- <input type="text" id="maxSpannung"><br>
- <label for="maxDrehzahl">Maximale Drehzahl (RPM):</label>
- <input type="text" id="maxDrehzahl"><br>
- <label for="kvFaustregel">KV-Wert:</label>
- <input type="text" id="kvFaustregel" readonly><br>
+      <label for="">Drehzahl</label>
+      <p id="endDrehzahl"></p>
+    </fieldset>
 
-</body>
+    <fieldset>
+      <legend>Berechnung KV</legend>
+      <label for="">Drehzahl</label>
+      <input type="text" id="calcDreh" placeholder="Enter Drehzahl" onkeyup="calcKV()" /><br />
 
+      <label for="">Spannung</label>
+      <input type="text" id="calcSpan" placeholder="Enter Spannung" /><br />
+
+      <label for="">KV</label>
+      <p id="endKV"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Spannung (V)</legend>
+      <label for="">Drehzahl</label>
+      <input type="text" id="calcDreh2" placeholder="Enter Drehzahl" /><br />
+
+      <label for="">KV</label>
+      <input type="text" id="calcKV2" placeholder="Enter Spannung" /><br />
+
+      <label for="">Spannung</label>
+      <p id="endSpannung"></p>
+    </fieldset>
+
+    <h1>Unterer Teil</h1>
+
+    <fieldset>
+      <legend>Max. Strom</legend>
+      <label for="">Kapazität:</label>
+      <input type="text" id="calcKapi" placeholder="Enter Kapazität" /><br />
+
+      <label for="">C-Rate</label>
+      <input type="text" id="calcCRate" placeholder="Enter C-Rate" /><br />
+
+      <label for="">Max. Strom</label>
+      <p id="endStrom"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Kapazität (Ah)</legend>
+      <label for="">C-Rate</label>
+      <input type="text" id="calcCRate2" placeholder="Enter C-Rate" /><br />
+
+      <label for="">Max. Strom</label>
+      <input type="text" id="calcStrom" placeholder="Enter Max. Strom" /><br />
+
+      <label for="">Kapazität</label>
+      <p id="endAh"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>C-Rate</legend>
+      <label for="">Max. Strom</label>
+      <input type="text" id="calcStrom2" placeholder="Enter Max. Strom" /><br />
+
+      <label for="">Kapazität</label>
+      <input type="text" id="calcKapi2" placeholder="Enter Kapazität" /><br />
+
+      <label for="">C-Rate</label>
+      <p id="endCRate"></p>
+    </fieldset>
+  </body>
 </html>
