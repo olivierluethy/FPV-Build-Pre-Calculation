@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="drehzahlcalc.js" defer></script>
+ <script src="faustregel.js" defer></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <h1>Important Calculations before Building FPV Drone</h1>
+ <h2>Formeln für Umdrehungen pro Minute (RPM)</h2>
+ <label for="drehzahl">Drehzahl (RPM):</label>
+ <input type="text" id="drehzahl" oninput="calculator.calculate()"><br>
+ <label for="kv">KV-Wert:</label>
+ <input type="text" id="kv" oninput="calculator.calculate()"><br>
+ <label for="spannung">Spannung (V):</label>
+ <input type="text" id="spannung" oninput="calculator.calculate()"><br>
+ <p id="rpm-warning" class="warning"></p>
+ 
+ <h2>Faustregel</h2>
+ <label for="maxSpannung">Maximale Spannung (V):</label>
+ <input type="text" id="maxSpannung"><br>
+ <label for="maxDrehzahl">Maximale Drehzahl (RPM):</label>
+ <input type="text" id="maxDrehzahl"><br>
+ <label for="kvFaustregel">KV-Wert:</label>
+ <input type="text" id="kvFaustregel" readonly><br>
+
+</body>
+
+</html>
