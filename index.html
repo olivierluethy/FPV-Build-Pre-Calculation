@@ -7,79 +7,79 @@
     <title>FPV Build Pre Calculation</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.avif">
   </head>
 
   <body>
-    <h1>Oberer Teil</h1>
+    <h1>FPV Build Pre Calculator</h1>
+    <p>Enter values here and the site will give you more input based on what you've entered if it doesn't make sense.</p>
     <fieldset>
-      <legend>Berechnung Drehzahl</legend>
-      <label for="">KV</label>
-      <input type="text" id="calcKV" placeholder="Enter KV" onkeyup="calcDrehzahl()"/><br />
+      <legend>Speed Calculation</legend>
+      <label for="">KV-Value</label>
+      <input type="text" id="calcKV" placeholder="Enter KV-Value" onkeyup="calcDrehzahl()"/><br />
 
-      <label for="">Spannung (V)</label>
-      <input type="text" id="calcSpan" placeholder="Enter Spannung" onkeyup="calcDrehzahl()" /><br />
+      <label for="">Voltage (V)</label>
+      <input type="text" id="calcSpan" placeholder="Enter Voltage" onkeyup="calcDrehzahl()" /><br />
 
-      <label for="">Drehzahl</label>
+      <label for="">Speed of rotation</label>
       <p id="endDrehzahl"></p>
-    </fieldset>
+    </fieldset><br>
 
     <fieldset>
-      <legend>Berechnung KV</legend>
-      <label for="">Drehzahl</label>
-      <input type="text" id="calcDreh" placeholder="Enter Drehzahl" onkeyup="calcKV()" /><br />
+      <legend>Calculation KV (Speed constant)</legend>
+      <label for="">Speed of rotation</label>
+      <input type="text" id="calcDreh" placeholder="Enter Speed of rotation" onkeyup="calcKV()" /><br />
 
-      <label for="">Spannung</label>
-      <input type="text" id="calcSpan" placeholder="Enter Spannung" /><br />
+      <label for="">Voltage (V)</label>
+      <input type="text" id="calcSpan" placeholder="Enter Voltage" /><br />
 
-      <label for="">KV</label>
+      <label for="">KV-Value</label>
       <p id="endKV"></p>
-    </fieldset>
+    </fieldset><br>
 
     <fieldset>
-      <legend>Spannung (V)</legend>
-      <label for="">Drehzahl</label>
-      <input type="text" id="calcDreh2" placeholder="Enter Drehzahl" /><br />
+      <legend>Voltage (V)</legend>
+      <label for="">Speed of rotation</label>
+      <input type="text" id="calcDreh2" placeholder="Enter Speed of rotation" /><br />
 
-      <label for="">KV</label>
-      <input type="text" id="calcKV2" placeholder="Enter Spannung" /><br />
+      <label for="">KV-Value</label>
+      <input type="text" id="calcKV2" placeholder="Enter KV-Value" /><br />
 
-      <label for="">Spannung</label>
+      <label for="">Voltage</label>
       <p id="endSpannung"></p>
-    </fieldset>
-
-    <h1>Unterer Teil</h1>
+    </fieldset><br>
 
     <fieldset>
-      <legend>Max. Strom</legend>
-      <label for="">Kapazität:</label>
-      <input type="text" id="calcKapi" placeholder="Enter Kapazität" /><br />
+      <legend>Max. Electricity</legend>
+      <label for="">Capacity:</label>
+      <input type="text" id="calcKapi" placeholder="Enter Capacity" /><br />
 
       <label for="">C-Rate</label>
       <input type="text" id="calcCRate" placeholder="Enter C-Rate" /><br />
 
-      <label for="">Max. Strom</label>
+      <label for="">Max. Electricity</label>
       <p id="endStrom"></p>
-    </fieldset>
+    </fieldset><br>
 
     <fieldset>
-      <legend>Kapazität (Ah)</legend>
+      <legend>Capacity (Ah)</legend>
       <label for="">C-Rate</label>
       <input type="text" id="calcCRate2" placeholder="Enter C-Rate" /><br />
 
-      <label for="">Max. Strom</label>
-      <input type="text" id="calcStrom" placeholder="Enter Max. Strom" /><br />
+      <label for="">Max. Electricity</label>
+      <input type="text" id="calcStrom" placeholder="Enter Max. Electricity" /><br />
 
-      <label for="">Kapazität</label>
+      <label for="">Capacity</label>
       <p id="endAh"></p>
-    </fieldset>
+    </fieldset><br>
 
     <fieldset>
       <legend>C-Rate</legend>
-      <label for="">Max. Strom</label>
-      <input type="text" id="calcStrom2" placeholder="Enter Max. Strom" /><br />
+      <label for="">Max. Electricity</label>
+      <input type="text" id="calcStrom2" placeholder="Enter Max. Electricity" /><br />
 
-      <label for="">Kapazität</label>
-      <input type="text" id="calcKapi2" placeholder="Enter Kapazität" /><br />
+      <label for="">Capacity</label>
+      <input type="text" id="calcKapi2" placeholder="Enter Capacity" /><br />
 
       <label for="">C-Rate</label>
       <p id="endCRate"></p>
